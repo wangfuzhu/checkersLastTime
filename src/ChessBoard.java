@@ -6,9 +6,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class ChessBoard extends JPanel implements MouseListener{
-
-
-    private static final long serialVersionUID = -8427438142176684142L;
     private static final Toolkit toolkit = Toolkit.getDefaultToolkit();
     private static final Image RedImage = toolkit.getImage("images/red.png");
     private static final Image RedImage1 = toolkit.getImage("images/red1.png");
