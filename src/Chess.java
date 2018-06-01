@@ -2,8 +2,6 @@ import java.awt.Point;
 
 public class Chess{
 
-    //Chess�ౣ���˵������ӵ��������ԣ�����λ�ã���ɫ���Ƿ�ɼ����Ƿ�Ϊ��
-
     private static final long serialVersionUID = -924062367765765973L;
     private String color;
     private boolean king = false;

@@ -196,11 +196,11 @@ public class ChessBoard extends JPanel implements MouseListener{
 
         if(chess.isKing() && Math.abs(fx - nx) == 1 && Math.abs(fy - ny) == 1){
             if(Util.eat(chess,new CheckerState(red,black),true)){
-                JOptionPane.showMessageDialog(this, "����Ե��Է�������");
+                JOptionPane.showMessageDialog(this, "0v0 win!");
                 return false;
             }
             else if(Util.eat(chess,new CheckerState(black,red),true)){
-                JOptionPane.showMessageDialog(this, "����Ե��Է�������");
+                JOptionPane.showMessageDialog(this, "0v0 win");
                 return false;
             }
             return true;
@@ -210,7 +210,7 @@ public class ChessBoard extends JPanel implements MouseListener{
             if(chess.getColor()=="black"){
                 if(Math.abs(fx - nx) == 1 && fy - ny == 1){
                     if(Util.eat(chess,new CheckerState(red,black),true)){
-                        JOptionPane.showMessageDialog(this, "����Ե��Է�������");
+                        JOptionPane.showMessageDialog(this, "you have to eat red!");
                         return false;
                     }
                     return true;
@@ -259,7 +259,7 @@ public class ChessBoard extends JPanel implements MouseListener{
             if(chess.getColor()=="red") {
                 if(Math.abs(nx - fx) == 1 && ny - fy == 1){
                     if(Util.eat(chess,new CheckerState(red,black),true)){
-                        JOptionPane.showMessageDialog(this, "����Ե��Է�������");
+                        JOptionPane.showMessageDialog(this, "you have to eat black");
                         return false;
                     }
                     return true;
