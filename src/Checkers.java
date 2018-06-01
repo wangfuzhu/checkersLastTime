@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Checkers extends JFrame implements ActionListener{
-    private static final long serialVersionUID = 6827040500650074373L;
     ChessBoard cb;
     JPanel top = new JPanel();
     JButton start = new JButton("New");
