@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.plaf.synth.SynthSeparatorUI;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -19,7 +18,6 @@ public class ChessBoard extends JPanel implements MouseListener{
 
     private Chess selectedChess;
     private Chess monster;
-    private Util util = new Util();
 
     public static Chess black[] = new Chess[12];
     public static Chess red[] = new Chess[12];
@@ -143,18 +141,14 @@ public class ChessBoard extends JPanel implements MouseListener{
                     }
                 }
                 repaint();
-                util.play();
                 if(monster!=null && monster.equals(selectedChess) && Util.eat(monster,red,black)){
                     monster = null;
-                    System.out.println("������ų�");
                     return;
                 }
                 if(selectedChess.getColor().equals("black")){
-                    CheckerState state = new CheckerState(red,black,true);
                     selectedChess = null;
                     turn = false;
                 }else if(selectedChess.getColor().equals("red")) {
-                    CheckerState state = new CheckerState(black,red,true);
                     selectedChess = null;
                     turn = true;
                 }
@@ -191,13 +185,9 @@ public class ChessBoard extends JPanel implements MouseListener{
                 }
             }
 
-        if(chess.isKing() && Math.abs(fx - nx) == 1 && Math.abs(fy - ny) == 1){
-            if(Util.eat(chess,new CheckerState(red,black),true)){
-                JOptionPane.showMessageDialog(this, "0v0 win!");
-                return false;
-            }
-            else if(Util.eat(chess,new CheckerState(black,red),true)){
-                JOptionPane.showMessageDialog(this, "0v0 win");
+        if (chess.isKing()&&chess.getColor().equals("white")&&Math.abs(fx-nx)==1&&Math.abs(fy-ny)==1) {
+            if (Util.eat(chess,red,black)) {
+                JOptionPane.showMessageDialog(this, "you have to eat !");
                 return false;
             }
             return true;

@@ -1,16 +1,12 @@
 import java.awt.Point;
 
 public class Chess{
-
-    private static final long serialVersionUID = -924062367765765973L;
     private String color;
     private boolean king = false;
     private boolean selected = false;
     private Point location;
     private boolean visible = true;
     int id;
-
-    boolean counted = false;
 
     public Chess(){
     }
