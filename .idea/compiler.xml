@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for checkersLastTime" enabled="true">
+        <sourceOutputDir name="out/production/checkersLastTime/generated-sources/annotations" />
+        <sourceTestOutputDir name="out/production/checkersLastTime/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="checkersLastTime" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="checkersLastTime" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

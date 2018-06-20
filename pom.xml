@@ -14,7 +14,7 @@
         </resources>
         <directory>out/production/checkersLastTime</directory>
         <sourceDirectory>src</sourceDirectory>
-        <testSourceDirectory>test</testSourceDirectory>
+        <testSourceDirectory>src</testSourceDirectory>
         <plugins>
             <!-- Maven JAR Plugin -->
             <plugin>
