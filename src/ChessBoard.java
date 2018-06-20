@@ -163,13 +163,6 @@ public class ChessBoard extends JPanel implements MouseListener{
     public void mouseExited(MouseEvent e){}
 
     private boolean ifCanGo(Chess chess,Point former, Point now){
-        System.out.println("former");
-        System.out.println(former.getX());
-        System.out.println(former.getY());
-
-        System.out.println("now");
-        System.out.println(now.getX());
-        System.out.println(now.getY());
 
         int fx = 0, fy = 0, nx = 0, ny = 0;
         monster = null;
